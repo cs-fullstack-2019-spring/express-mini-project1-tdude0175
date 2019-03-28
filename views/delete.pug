@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1  Delete User
+    form(method="POST")
+        p
+            label(for='id') Enter the ID for the user to delete:
+            input(type='text', id='id', name='id')
+        button Submit
+
+    if isSent
+        h1 Item Delete from database

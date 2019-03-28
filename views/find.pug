@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1  Find User
+    form(method="POST")
+        p
+            label(for='id') Enter the ID for the user:
+            input(type='text', id='id', name='id')
+        button Submit
+
+    if findResults
+        h1 Here are the results
+        img(src=findResults.image)
+        h1 #{findResults.name} (ID: #{findResults.id})
+        h2 Powers
+        p intelligence: #{findResults.powers.intelligence}, strength: #{findResults.powers.strength}, speed: #{findResults.powers.speed}, combat: #{findResults.powers.combat}, wealth: #{findResults.powers.wealth}
+    else
+        h1 No Results

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Become a Superhero in Memphis
+  h2 The following heroes are currently in Memphis
+
+  div.container
+    each entry in allEntries
+      div.gridSection
+        img(src=entry.image)
+        h1 #{entry.name} (ID: #{entry.id})
+        h2 Powers
+        p intelligence: #{entry.powers.intelligence}, strength: #{entry.powers.strength}, speed: #{entry.powers.speed}, combat: #{entry.powers.combat}, wealth: #{entry.powers.wealth}
+    else
+      h1 No Super Heros Are Registered

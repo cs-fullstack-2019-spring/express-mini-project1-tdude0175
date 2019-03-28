@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1  Edit User
+    form(method="POST" action='/editChange')
+        p
+            label(for='id') Enter the ID for the user:
+            input(type='text', id='id', name='id', value=findResults.id)
+        p
+            label(for='name') Enter the name:
+            input(type='text', id='name', name='name', value=findResults.name)
+        p
+            label(for='intelligence') Enter intelligence:
+            input(type='text', id='intelligence', name='powers.intelligence', value=findResults.powers.intelligence)
+        p
+            label(for='strength') Enter strength:
+            input(type='text', id='strength', name='powers.strength', value=findResults.powers.strength)
+        p
+            label(for='speed') Enter speed:
+            input(type='text', id='speed', name='powers.speed', value=findResults.powers.speed)
+        p
+            label(for='combat') Enter combat:
+            input(type='text', id='combat', name='powers.combat', value=findResults.powers.combat)
+        p
+            label(for='wealth') Enter wealth:
+            input(type='text', id='wealth', name='powers.wealth', value=findResults.powers.wealth)
+        p
+            label(for='image') Enter image URL:
+            input(type='text', id='image', name='image', value=findResults.image)
+
+        button Submit
+    if isSent
+        h1 Item Created
