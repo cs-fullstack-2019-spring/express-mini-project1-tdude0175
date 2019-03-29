@@ -4,3 +4,5 @@ Make a site for super heros to apply to work in Memphis. Use the Pug views provi
 
 ### Challenge
 Make a proper edit page by asking the user which ID to edit, then providing the existing data to make changes.
+<hr>
+2 points.
